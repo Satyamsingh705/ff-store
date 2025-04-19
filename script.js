@@ -1,6 +1,8 @@
 // Countdown Timer
 function updateTimer() {
     const countdownElement = document.getElementById('countdown');
+    if (!countdownElement) return;
+    
     let [hours, minutes, seconds] = countdownElement.textContent.split(':').map(Number);
     
     setInterval(() => {
@@ -33,7 +35,20 @@ const reviews = [
 
 function displayReviews() {
     const container = document.getElementById('reviewContainer');
+    if (!container) return;
+    
+    // First update all month references in the reviews
+    const months = [
+        "January", "February", "March", "April",
+        "May", "June", "July", "August",
+        "September", "October", "November", "December"
+    ];
+    const currentMonth = months[new Date().getMonth()];
+    
     reviews.forEach(review => {
+        // Replace any month name with the current month
+        review.text = review.text.replace(/January|February|March|April|May|June|July|August|September|October|November|December/g, currentMonth);
+        
         const reviewElement = document.createElement('div');
         reviewElement.className = 'review';
         reviewElement.innerHTML = `
@@ -50,6 +65,8 @@ function displayReviews() {
 
 // Animated Counter
 function animateNumber(element, target, duration = 2000) {
+    if (!element) return;
+    
     const start = 0;
     const increment = (target - start) / (duration / 16);
     let current = start;
@@ -73,6 +90,8 @@ function initializeFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const answer = item.querySelector('.faq-answer');
+        if (!answer) return;
+        
         answer.style.display = 'none';
 
         item.addEventListener('click', () => {
@@ -104,14 +123,57 @@ function initializeScrollAnimation() {
     });
 }
 
-// Initialize
+// Function to update date elements (both day and month)
+function updateDateElements() {
+    const days = [
+        "Sunday", "Monday", "Tuesday", "Wednesday", 
+        "Thursday", "Friday", "Saturday"
+    ];
+    
+    const months = [
+        "January", "February", "March", "April",
+        "May", "June", "July", "August",
+        "September", "October", "November", "December"
+    ];
+    
+    // Get current date info
+    const currentDate = new Date();
+    const dayOfWeek = days[currentDate.getDay()];
+    const currentMonth = months[currentDate.getMonth()];
+    
+    // Update the day of week in the banner
+    const currentDayElement = document.getElementById('current-day');
+    if (currentDayElement) {
+        currentDayElement.textContent = dayOfWeek;
+    }
+    
+    // Update the month in the header
+    const currentMonthElement = document.getElementById('current-month');
+    if (currentMonthElement) {
+        currentMonthElement.textContent = currentMonth;
+    }
+    
+    // Update month in title if needed
+    if (document.title) {
+        document.title = document.title.replace(
+            /January|February|March|April|May|June|July|August|September|October|November|December/g, 
+            currentMonth
+        );
+    }
+}
+
+// Initialize everything with a single event listener
 document.addEventListener('DOMContentLoaded', () => {
+    // Update dates first
+    updateDateElements();
+    
+    // Initialize all components
     updateTimer();
     displayReviews();
     initializeFAQ();
     initializeScrollAnimation();
     
-    // Animate numbers with different targets and durations
+    // Animate counter numbers
     animateNumber(document.getElementById('productsSold'), 1574);
     animateNumber(document.getElementById('happyCustomers'), 942);
     animateNumber(document.getElementById('reviews'), 825);
@@ -127,3 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Check for date changes regularly
+setInterval(updateDateElements, 60000); // Update every minute
