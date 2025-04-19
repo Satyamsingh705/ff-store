@@ -788,4 +788,34 @@ footer {
     .products {
         grid-template-columns: repeat(3, 1fr);
     }
+}/* Modified product card image styling */
+.product-card {
+    /* Keep existing styles */
+    padding: 20px; /* Reduced padding to give more space for the image */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto; /* Changed from fixed height to auto */
+    max-height: 250px; /* Set a maximum height */
+    object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-card {
+        padding: 15px;
+    }
+    
+    .product-card img {
+        max-height: 200px;
+    }
+    
+    .products {
+        gap: 15px; /* Reduced gap between products on mobile */
+    }
 }
