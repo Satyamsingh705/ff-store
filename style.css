@@ -931,3 +931,33 @@ footer {
     background: linear-gradient(45deg, var(--accent-color), #f7b733);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
+/* Add bright yellow outline to all product card containers */
+.product-card {
+    border: 3px solid #FFD700 !important; /* Bright gold/yellow border */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5) !important; /* Yellow glow effect */
+}
+
+/* Premium cards get a more intense glow */
+.product-card.premium {
+    border: 3px solid #FFFF00 !important; /* Brighter yellow for premium */
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.7) !important; /* Stronger glow */
+}
+
+/* Enhanced hover effect */
+.product-card:hover {
+    transform: translateY(-15px);
+    border-color: #FFFF00 !important;
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.6) !important;
+}
+
+/* Make sure the border doesn't affect the internal layout */
+.product-card {
+    box-sizing: border-box;
+}
+
+/* For product cards with videos, ensure the outline works properly */
+.product-card video,
+.product-card iframe {
+    width: 100%;
+    border-radius: 17px 17px 0 0; /* Slightly smaller than container to account for border */
+}
