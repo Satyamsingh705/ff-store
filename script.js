@@ -192,3 +192,118 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Check for date changes regularly
 setInterval(updateDateElements, 60000); // Update every minute
+// Video Modal Functionality// Video Modal Functionality
+
+function setupVideoModal() {
+    // Get modal elements with existence check
+    const modal = document.getElementById('videoModal');
+    if (!modal) {
+        console.warn("Modal element not found. Add the modal HTML to your page.");
+        return;
+    }
+    
+    const modalVideoContainer = document.getElementById('modalVideoContainer');
+    const closeBtn = document.querySelector('.close-modal');
+    
+    if (!modalVideoContainer || !closeBtn) {
+        console.warn("Modal container or close button not found");
+        return;
+    }
+    
+    // Collection of video IDs with default fallback
+    const videoIds = {
+        '⭐ Level 71 Premium Bundle ⭐': 'I6fftooOpVw',
+        'Level 65 Elite Package': 'lSRkcjx7o_A',
+        'Max Evolution Bundle': 'lSRkcjx7o_A',
+        'default': 'I6fftooOpVw' // Default video if no match is found
+    };
+    
+    // Add click handlers to all "WATCH COLLECTION | Buy Now" buttons
+    const watchButtons = document.querySelectorAll('.buy-now');
+    watchButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent direct WhatsApp redirect
+            
+            // Find the product title from the parent card
+            const card = this.closest('.product-card');
+            const productTitle = card ? card.querySelector('h3').textContent.trim() : '';
+            
+            // Get the appropriate video ID or use default
+            const videoId = videoIds[productTitle] || videoIds['default'];
+            
+            // Create the iframe element with error handling
+            modalVideoContainer.innerHTML = `
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+                    title="Product Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <div id="videoError" style="display:none; color:white; text-align:center; padding:20px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:rgba(0,0,0,0.7); border-radius:10px; width:80%;">
+                    Video cannot be loaded. <a href="https://youtu.be/${videoId}" target="_blank" style="color:#f59e0b;">Watch on YouTube</a> instead.
+                </div>
+            `;
+            
+            // Show the modal
+            modal.style.display = 'block';
+        });
+    });
+    
+    // Close modal when clicking the X button
+    closeBtn.addEventListener('click', function() {
+        closeModal();
+    });
+    
+    // Close modal when clicking outside of the content
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Escape key to close modal
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+    
+    // Function to close the modal
+    function closeModal() {
+        modal.style.display = 'none';
+        modalVideoContainer.innerHTML = ''; // Remove the iframe
+    }
+}
+
+// REMOVE THE DUPLICATE EVENT LISTENER (lines 192-216)
+// Keep only one DOMContentLoaded event listener - this one:
+document.addEventListener('DOMContentLoaded', () => {
+    // Update dates first
+    updateDateElements();
+    
+    // Initialize all components
+    updateTimer();
+    displayReviews();
+    initializeFAQ();
+    initializeScrollAnimation();
+    setupVideoModal(); // This will now work correctly
+    
+    // Animate counter numbers
+    animateNumber(document.getElementById('productsSold'), 1574);
+    animateNumber(document.getElementById('happyCustomers'), 942);
+    animateNumber(document.getElementById('reviews'), 825);
+
+    // Add hover effect to buttons
+    const buttons = document.querySelectorAll('.buy-now, .featured-button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+            button.style.transform = 'translateY(-3px)';
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.transform = 'translateY(0)';
+        });
+    });
+});
