@@ -75,7 +75,7 @@ document.querySelector('#app').innerHTML = `
           Premium Service
         </div>
       </div>
-      <p class="trust-message">Trusted by over 50,000 players worldwide</p>
+      <p class="trust-message">Trusted by over 5000 players All Over India</p>
     </header>
 
     <div class="security-bar">
