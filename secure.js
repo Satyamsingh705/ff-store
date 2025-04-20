@@ -101,7 +101,7 @@ const testimonials = [
     name: 'Sarah Johnson',
     role: 'Online Retailer',
     content: 'The 100% Secure Payment feature has completely transformed how my customers feel about purchasing from my store.',
-    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150'
+    image: 'https://blogger.googleusercontent.com/img/a/AVvXsEgiOlcJ25T4Pq5PAqYqofOJITcfYIGaw8x1kfR6IkpV2rmVf2gFV-fsC4oZNPtZysTJ1-QM13fH-Cy83IyGcgSXCUV_iYgAp2icFJRZtvw8KWlwFEfUcGiI5iCZ4bWOVJ0y6N9qDMFW2hj6Vht4CC7fZNRthRgTtgclQOZoKbZUKwsUBv0OiVcIMjZfXTl2'
   },
   {
     name: 'Michael Rodriguez',
@@ -117,16 +117,52 @@ const testimonials = [
   }
 ];
 
+// Update the testimonials rendering
 testimonialsGrid.innerHTML = testimonials.map(testimonial => `
   <div class="testimonial-card">
-    <div class="flex items-center mb-4">
-      <img src="${testimonial.image}" alt="${testimonial.name}" class="w-12 h-12 rounded-full">
-      <div class="ml-4">
+    <div>
+      <img src="${testimonial.image}" alt="${testimonial.name}">
+      <div>
         <h4 class="font-semibold">${testimonial.name}</h4>
         <p class="text-gray-600">${testimonial.role}</p>
       </div>
     </div>
     <p class="text-gray-700">${testimonial.content}</p>
+  </div>
+`).join('');
+
+// Update features rendering
+featuresGrid.innerHTML = features.map(feature => `
+  <div class="feature-card">
+    <img src="${feature.icon}" alt="${feature.title}">
+    <h3 class="text-lg font-semibold mb-2">${feature.title}</h3>
+    <p class="text-gray-600">${feature.description}</p>
+  </div>
+`).join('');
+
+// Update FAQ rendering
+faqList.innerHTML = faqs.map(faq => `
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>${faq.question}</h3>
+      <img src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt="Expand">
+    </div>
+    <div class="faq-answer">${faq.answer}</div>
+  </div>
+`).join('');
+
+// Update log entries
+logEntries.innerHTML = securityLogs.map(log => `
+  <div class="log-entry">
+    <img 
+      src="${log.status === 'success' 
+        ? 'https://cdn-icons-png.flaticon.com/128/4315/4315445.png'
+        : 'https://cdn-icons-png.flaticon.com/128/1828/1828843.png'}"
+      alt="${log.status}"
+      class="log-icon"
+    >
+    <span class="font-medium">${log.action}</span>
+    <span class="text-gray-500 ml-auto">${log.time}</span>
   </div>
 `).join('');
 

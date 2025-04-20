@@ -213,7 +213,10 @@ function setupVideoModal() {
     // Collection of video IDs with default fallback
     const videoIds = {
         '⚡ Level 71 Premium Bundle ⚡': 'lSRkcjx7o_A',
-        '⚡ Level 65 Elite Package ⚡': 'lSRkcjx7o_A',
+        '⚡ Level 65 Elite Package ⚡': 'AhMiM9eZMH0',
+        '⚡ Level 67 Evo Unlocked ⚡':'CtU6kujaZRM',
+        '⚡ Level 80 All Evo Unlocked ⚡':'elZNDAyGX8o',
+        '⚡ Super Rare Collection ⚡':'TMlP1kKkOvM',
         'Max Evolution Bundle': 'lSRkcjx7o_A',
         //'default': 'I6fftooOpVw' // Default video if no match is found
     };
