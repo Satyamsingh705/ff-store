@@ -98,22 +98,22 @@ featuresGrid.innerHTML = features.map(feature => `
 const testimonialsGrid = document.querySelector('.testimonials-grid');
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    role: 'Online Retailer',
-    content: 'The 100% Secure Payment feature has completely transformed how my customers feel about purchasing from my store.',
+    name: 'Bhupinder Jogi',
+    role: 'UP',
+    content: 'Payment ke terms me bahot shi hai, 100% return milta hai, trust karo bina kisi tension ke.',
     image: 'https://blogger.googleusercontent.com/img/a/AVvXsEgiOlcJ25T4Pq5PAqYqofOJITcfYIGaw8x1kfR6IkpV2rmVf2gFV-fsC4oZNPtZysTJ1-QM13fH-Cy83IyGcgSXCUV_iYgAp2icFJRZtvw8KWlwFEfUcGiI5iCZ4bWOVJ0y6N9qDMFW2hj6Vht4CC7fZNRthRgTtgclQOZoKbZUKwsUBv0OiVcIMjZfXTl2'
   },
   {
-    name: 'Michael Rodriguez',
-    role: 'E-commerce Director',
-    content: 'Our chargebacks have decreased by 35% since implementing this secure payment solution.',
-    image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=150'
+    name: 'Ramesh Yadav',
+    role: 'Bengal',
+    content: 'Hamne id kharida tha,pasand nhi aaya ,turant refund aa gya koi dikkat nhi hai',
+    image: 'https://blogger.googleusercontent.com/img/a/AVvXsEjRUFjdars2uxM9Lwlvg9J4eEOB82ndd79dywH59xrucDTQx2iX-fq7vCU5cPp0wyn3t0g8xmW5PeciDoXGnjJhBuuJY-NgduPcq_8x9gjkxWYOG7ugCbecStQ-aTn5pXB2pNiSH5NmFB0MA3e95t4OeFzBmHaG1R7CiPqZFwyHhTOUUbK3gr2fZiZVziYI'
   },
   {
-    name: 'Emma Thompson',
-    role: 'Small Business Owner',
-    content: 'This secure payment system has given my customers the confidence to complete their purchases.',
-    image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=150'
+    name: 'Shivanshu Singh',
+    role: 'MP',
+    content: 'I got 3 evo uncloked in just ₹499 guns.Amazing deal!',
+    image: 'https://blogger.googleusercontent.com/img/a/AVvXsEhwzhq2wV2eYZk98nGrY5TPnIouBE0_SfX3QpvKhhRvkEydHkoYXaLVggbNYHgk40oRXmEcJqlZdtzb92i92-Ljg60ps2xihWptbxj0p-Nb_ztQftTndgwc1j_a9phbhU4PiqnlJCtmD4uvNzMBfLlA65JdTt9KYVBA12dStxcxiwwpqA1hE2F-4N6C9IGF'
   }
 ];
 
