@@ -1144,3 +1144,24 @@ footer {
     z-index: 2001;
     font-size: 14px;
 }
+/* Add this to your style.css file */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+    .badges {
+        gap: 8px;
+    }
+    
+    .badge {
+        margin-bottom: 8px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
