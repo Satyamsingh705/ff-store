@@ -212,10 +212,10 @@ function setupVideoModal() {
     
     // Collection of video IDs with default fallback
     const videoIds = {
-        '⭐ Level 71 Premium Bundle ⭐': 'I6fftooOpVw',
-        'Level 65 Elite Package': 'lSRkcjx7o_A',
+        '⚡ Level 71 Premium Bundle ⚡': 'lSRkcjx7o_A',
+        '⚡ Level 65 Elite Package ⚡': 'lSRkcjx7o_A',
         'Max Evolution Bundle': 'lSRkcjx7o_A',
-        'default': 'I6fftooOpVw' // Default video if no match is found
+        //'default': 'I6fftooOpVw' // Default video if no match is found
     };
     
     // Add click handlers to all "WATCH COLLECTION | Buy Now" buttons
