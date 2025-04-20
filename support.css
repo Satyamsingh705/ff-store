@@ -431,4 +431,7 @@ footer {
     margin: 10px 0 0 0;
     padding: 0 10px 10px;
     display: none; /* Hidden by default */
+}@keyframes highlight {
+    0% { background-color: rgba(255, 215, 0, 0.3); }
+    100% { background-color: transparent; }
 }
