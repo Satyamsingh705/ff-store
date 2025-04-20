@@ -112,9 +112,10 @@ const testimonials = [
   {
     name: 'Shivanshu Singh',
     role: 'MP',
-    content: 'I got 3 evo uncloked in just ₹499 guns.Amazing deal!',
+    content: 'I got 3 evo uncloked guns in just ₹499.Amazing deal!',
     image: 'https://blogger.googleusercontent.com/img/a/AVvXsEhwzhq2wV2eYZk98nGrY5TPnIouBE0_SfX3QpvKhhRvkEydHkoYXaLVggbNYHgk40oRXmEcJqlZdtzb92i92-Ljg60ps2xihWptbxj0p-Nb_ztQftTndgwc1j_a9phbhU4PiqnlJCtmD4uvNzMBfLlA65JdTt9KYVBA12dStxcxiwwpqA1hE2F-4N6C9IGF'
-  }
+  },
+  
 ];
 
 // Update the testimonials rendering
