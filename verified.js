@@ -205,7 +205,7 @@ document.querySelector('#app').innerHTML = `
           <i class="fab fa-telegram"></i>
           <p>Telegram Channel</p>
           <span>Daily updates & offers</span>
-          <div class="members-count">50K+ Members</div>
+          <div class="members-count">5K+ Members</div>
         </div>
         <div class="contact-method">
           <i class="fas fa-envelope"></i>
