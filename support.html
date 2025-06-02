@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Store - Customer Support</title>
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Free Fire Store</a>
+            <a href="/support.html" class="nav-link">Home</a>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section class="hero">
+            <h1>How can we help you?</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for help...">
+                <button onclick="searchHelp()">Search</button>
+            </div>
+        </section>
+
+        <section class="support-categories">
+            <div class="category">
+                <h3>Payments</h3>
+                <ul>
+                    <li><a href="payment-methods.html">Payment Methods</a></li>
+                    <li><a href="failed-transactions.html">Failed Transactions</a></li>
+                    <li><a href="refund-policy.html">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Diamonds & Items</h3>
+                <ul>
+                    <li><a href="diamond-issues.html">Diamond Purchase Issues</a></li>
+                    <li><a href="item-delivery.html">Item Delivery</a></li>
+                    <li><a href="missing-items.html">Missing Items</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Customer Support</h2>
+            <form id="supportForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="issue">Issue Type:</label>
+                    <select id="issue" required>
+                        <option value="">Select an issue</option>
+                        <option value="account">Account Problem</option>
+                        <option value="payment">Payment Issue</option>
+                        <option value="items">Items Not Received</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">How long does it take to receive diamonds?</h3>
+                <p>Diamonds are usually credited to your account instantly after successful payment. If you haven't received them within 5 minutes, please contact support.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What payment methods do you accept?</h3>
+                <p>We accept credit/debit cards, PayPal, and various local payment methods depending on your region.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Is it safe to buy from your store?</h3>
+                <p>Yes, we are an authorized Free Fire diamond seller. All transactions are secure and your personal information is protected.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Free Fire Store. All rights reserved.</p>
+    </footer>
+
+    <script src="support.js"></script>
+</body>
+</html>
