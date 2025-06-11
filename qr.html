@@ -28,6 +28,24 @@
             border-radius: 10px;
         }
         
+        .download-button {
+            display: inline-block;
+            margin: 10px auto 20px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 200px;
+        }
+        
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
         .payment-instructions {
             margin: 20px 0;
             text-align: left;
@@ -82,8 +100,12 @@
         <h2>Scan & Pay</h2>
         <div class="qr-code">
             <!-- Replace with your actual QR code image -->
-            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEghmHh8f_OdUdPhpIHTeackeYM1OIYPUA7SMnCH_25gd5g-WN5sAI_HEB94NGH0IRsrNilG0sVZ5um8D1Nwq_1xqebwo-VYMAkxtM3-6JHr3AhaI2efkyHYYMopfhNWXcT2Z2VtdKrjkhz4qcpgSxpKimp3HI33Kfv-GY8WdtUat2hHl_5MuGz8pDoicO03" alt="Payment QR Code">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEghmHh8f_OdUdPhpIHTeackeYM1OIYPUA7SMnCH_25gd5g-WN5sAI_HEB94NGH0IRsrNilG0sVZ5um8D1Nwq_1xqebwo-VYMAkxtM3-6JHr3AhaI2efkyHYYMopfhNWXcT2Z2VtdKrjkhz4qcpgSxpKimp3HI33Kfv-GY8WdtUat2hHl_5MuGz8pDoicO03" alt="Payment QR Code" id="qr-image">
         </div>
+        
+        <a href="https://blogger.googleusercontent.com/img/a/AVvXsEghmHh8f_OdUdPhpIHTeackeYM1OIYPUA7SMnCH_25gd5g-WN5sAI_HEB94NGH0IRsrNilG0sVZ5um8D1Nwq_1xqebwo-VYMAkxtM3-6JHr3AhaI2efkyHYYMopfhNWXcT2Z2VtdKrjkhz4qcpgSxpKimp3HI33Kfv-GY8WdtUat2hHl_5MuGz8pDoicO03" download="payment-qr-code.jpg" class="download-button">
+            <i class="fas fa-download"></i> Download QR Code
+        </a>
         
         <div class="payment-instructions">
             <h3>How to Pay:</h3>
