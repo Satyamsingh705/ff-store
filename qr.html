@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment QR Code</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .qr-container {
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 3px solid #FFD700;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+        }
+        
+        .qr-code {
+            margin: 30px 0;
+        }
+        
+        .qr-code img {
+            max-width: 300px;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        
+        .payment-instructions {
+            margin: 20px 0;
+            text-align: left;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .payment-instructions ol {
+            margin-left: 20px;
+        }
+        
+        .payment-instructions li {
+            margin: 10px 0;
+        }
+        
+        .back-button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 200px;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Notification Bar -->
+    <div class="notification-bar">
+        <marquee behavior="scroll" direction="left">
+            🎮 Scan QR to Complete Your Purchase | 🎁 Extra 10% OFF on Multiple Purchases | 💫 Limited Time Offer
+        </marquee>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <h1>Complete Your Purchase</h1>
+            <p class="subtitle">Scan the QR code below to make payment</p>
+        </div>
+    </header>
+    
+    <div class="qr-container">
+        <h2>Scan & Pay</h2>
+        <div class="qr-code">
+            <!-- Replace with your actual QR code image -->
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEghmHh8f_OdUdPhpIHTeackeYM1OIYPUA7SMnCH_25gd5g-WN5sAI_HEB94NGH0IRsrNilG0sVZ5um8D1Nwq_1xqebwo-VYMAkxtM3-6JHr3AhaI2efkyHYYMopfhNWXcT2Z2VtdKrjkhz4qcpgSxpKimp3HI33Kfv-GY8WdtUat2hHl_5MuGz8pDoicO03" alt="Payment QR Code">
+        </div>
+        
+        <div class="payment-instructions">
+            <h3>How to Pay:</h3>
+            <ol>
+                <li>Open any UPI app (PhonePe, Google Pay, Paytm, etc.)</li>
+                <li>Scan the QR code above</li>
+                <li>Enter the amount shown in your product</li>
+                <li>Complete the payment</li>
+                <li>After payment, take a screenshot and send it to our WhatsApp</li>
+            </ol>
+        </div>
+        
+        <a href="index.html" class="back-button">Back to Store</a>
+    </div>
+    
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2025 Game Store. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
